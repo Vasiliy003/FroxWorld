@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #0D0D0D;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.logo-text {
+    font-size: 50px;
+    font-weight: 500;
+    margin-left: 10px;
+    
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.header-social img {
+    width: 60px;
+    height: 60px;
+}
+
+.header-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+}
+
+.sign-in {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-in div img {
+    width: 70px;
+    height: 70px;
+    margin-left: 30px;
+}
+
+.background-figure {
+    background-color: #FF7D00;
+    position: absolute;
+    z-index: -1;
+    width: 1500px;
+    height: 1500px;
+    top: -50px;
+    left: -850px;
+    transform: rotate(40deg);
+    box-shadow: 0px 0px 10px 10px #FF7D00;
+}
+
+.big-logo {
+    height: 300px;
+    width: 300px;
+}
+
+.start-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+}
+
+.description {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.description-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+    width: 400px;
+    margin-left: 20px;
+}
+
+.description-text h1 {
+    font-size: 88px;
+    font-weight: 500;
+}
+
+.description-text-p {
+    font-size: 40px;
+    width: 30vw;
+}
+
+.play {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.play-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 75px;
+    background-color: #FF7D00;
+    height: 120px;
+    width: 28vw;
+}
+
+.play-btn p {
+    font-size: 70px;
+    font-weight: 600;
+    flex-grow: 1;
+    margin-left: 60px;
+    
+}
+
+.play-version {
+    width: 500px;
+    margin-top: 10px;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 25px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 90px;
+}
+
+.about-text {
+    width: 90vw;
+    font-size: 40px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.donate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.donate-title {
+    font-size: 90px;
+}
+
+.donate-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90vw;
+}
+
+.card {
+    display: flex;
+    border-radius: 40px;
+    background-color: white;
+    width: 23vw;
+    height: 62vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 75px;
+}
+
+.donate-description {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    width: 20vw;
+}
+
+.donate-name {
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.donate-price {
+    font-weight: 500;
+    color: #FF7D00;
+}
+
+footer {
+    margin-top: 60px;
+    padding-top: 40px;
+    background-color: #231507;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+    margin-left: 2.5vw;
+}
