@@ -6,15 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body class="body-login">
     <main>
-        <form action="#" method="get" class="main-login">
+        <form action="#" method="POST" class="main">
             <div class="label">Вход</div>
-            <div class="login-input">
-                <input placeholder="Логин/Почта" type="text" name="login/email"></input>
-                <input placeholder="Пароль" type="text" name="password"></input>
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <div class="input-logo"><img src="img/user-icon.png" alt=""></div>
+                    <input placeholder="Логин/Почта" type="text" name="login/email">
+                </div>
+                <div class="input-wrapper">
+                    <div class="input-logo"><img src="img/pass-icon.png" alt=""></div>
+                    <input placeholder="Пароль" type="password" name="password">
+                </div>
             </div>
             <div>
                 <div><button type="submit" class="login-btn">Войти</button></div>

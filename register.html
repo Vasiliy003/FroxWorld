@@ -6,17 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
 </head>
-<body class="body-register">
+<body>
     <main>
-        <form action="#" method="get" class="main-register">
+        <form action="#" method="POST" class="main">
             <div class="label">Регистрация</div>
-            <div class="register-input">
-                <input placeholder="Логин" type="text" name="login"></input>
-                <input placeholder="E-mail" type="text" name="email"></input>
-                <input placeholder="Пароль" type="text" name="password"></input>
-                <input placeholder="Повторите пароль" type="text" name="repassword"></input>
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <div class="input-logo"><img src="img/user-icon.png" alt=""></div>
+                    <input placeholder="Логин" type="text" name="login">
+                </div>
+                <div class="input-wrapper">
+                    <div class="input-logo"><img src="img/email-icon.png" alt=""></div>
+                    <input placeholder="E-mail" type="email" name="email">
+                </div>
+                <div class="input-wrapper">
+                    <div class="input-logo"><img src="img/pass-icon.png" alt=""></div>
+                    <input placeholder="Пароль" type="password" name="password">
+                </div>
+                <div class="input-wrapper">
+                    <div class="input-logo"><img src="img/pass-icon.png" alt=""></div>
+                    <input placeholder="Повторите пароль" type="password" name="repassword">
+                </div>
             </div>
             <div>
                 <div><button type="submit" class="register-btn">Зарегистрироваться</button></div>
