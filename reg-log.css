@@ -70,6 +70,7 @@ body {
     border: 0.8px solid #fff;
     border-radius: 0.5vw;
     display: flex;
+    height: 3vw;
 }
 
 .input-logo img {
