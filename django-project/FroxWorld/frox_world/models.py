@@ -27,20 +27,23 @@ class Profile(models.Model):
     image = models.ImageField()
     skin = models.ImageField()
 
-class User(models.Model):
-    login = models.CharField(max_length=150, null=False, blank=False, default="Georgiy")
-    password = models.CharField(max_length=150, null=False, blank=False, default=123)
-    email = models.EmailField()
-    profile = models.OneToOneField(
-        'Profile', on_delete=models.CASCADE
-    )
+# class User(models.Model):
+#     login = models.CharField(max_length=150, null=False, blank=False, default="Georgiy")
+#     password = models.CharField(max_length=150, null=False, blank=False, default=123)
+#     email = models.EmailField()
+#     profile = models.OneToOneField(
+#         'Profile', on_delete=models.CASCADE
+#     )
     
-    def __str__(self):
-        return self.login
+#     def __str__(self):
+#         return self.login
     
 class Server(models.Model):
     ip = models.IntegerField(null=False)
     name = models.CharField(max_length=150, null=False, blank=False, default="qwerty-serv")
+    online = models.IntegerField(blank=False, default=0)
+    max_online = models.IntegerField(blank=False, null=False, default=250)
+    is_online = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name

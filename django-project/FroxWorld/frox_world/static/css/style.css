@@ -1,0 +1,397 @@
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #0D0D0D;
+    color: #ffffff;
+    font-size: 1.56vw;
+}
+
+header {
+    padding-top: 0.62vw;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 2.5vw;
+    font-weight: 500;
+    margin-left: 0.5vw;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 5vw;
+    height: 5vw;
+}
+
+.header-social {
+    display: flex;
+    justify-content: space-between;
+    width: 11vw;
+}
+
+.header-social img {
+    width: 3vw;
+    height: 3vw;
+}
+
+.header-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 28.6vw;
+    font-size: 1.5vw;
+}
+
+.sign-in {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-in-btn {
+    font-size: 1.5vw;
+    margin-top: 0.6vw;
+}
+
+.sign-in img {
+    width: 3.6vw;
+    height: 3.6vw;
+    margin-left: 1.5vw;
+}
+
+.background-figure {
+    background-color: #FF7D00;
+    position: absolute;
+    z-index: -1;
+    width: 78vw;
+    height: 78vw;
+    top: -2.6vw;
+    left: -44.2vw;
+    transform: rotate(40deg);
+    box-shadow: 0vw 0vw 0.52vw 0.52vw #FF7D00;
+}
+
+.big-logo {
+    height: 15.6vw;
+    width: 15.6vw;
+}
+
+.start-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50vw;
+    margin-top: 13vw;
+}
+
+.description {
+    display: flex;
+    margin-left: 0.52vw;
+    align-items: center;
+}
+
+.description-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8vw;
+    width: 20.8vw;
+    margin-left: 1.04vw;
+}
+
+.description-text h1 {
+    font-size: 4.5vw;
+    font-weight: 500;
+    line-height: 6vw;
+}
+
+.description-text-p {
+    font-size: 2vw;
+    width: 30vw;
+    line-height: 3vw;
+}
+
+.play {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2.60vw;
+    margin-bottom: 2.60vw;
+}
+
+.play-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5.20vw;
+    background-color: #fd922e;
+    height: 7.8vw;
+    width: 28vw;
+}
+
+.play-btn p {
+    font-size: 3.6vw;
+    font-weight: 600;
+    flex-grow: 1;
+    margin-left: 3.1vw;
+}
+
+.play-btn img {
+    width: 15vw;
+    height: 7.5vw;
+}
+
+.play-version {
+    display: flex;
+    align-items: center;
+    margin-left: 1.3vw;
+}
+
+.play-version p {
+    width: 26vw;
+    font-size: 1.5vw;
+    text-align: left;
+    line-height: 2vw;
+}
+
+.about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-image {
+    width: 34vw;
+    height: 40vw;
+}
+
+.about-text {
+    width: 50vw;
+    font-size: 1.5vw;
+    margin-top: 1.5vw;
+    text-align: center;
+}
+
+.about-line {
+    width: 5vw;
+    height: 0.1vw;
+    background-color: white;
+    margin-top: 1.04vw;
+}
+
+.about-title {
+    font-size: 3.6vw;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15.6vw;
+}
+
+.advantages-title {
+    font-size: 3.6vw;
+    margin-bottom: 10.4vw;
+}
+
+.advantage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+    height: 15vw;
+}
+
+.advantage-icon {
+    width: 5vw;
+    height: 5vw;
+
+}
+
+.advantage-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8vw;
+    height: 8vw;
+    margin-top: 0.75vw;
+    margin-left: 0.75vw;
+    color: white;
+    border-radius: 4.6vw;
+    background-color: #ffffffaf;
+}
+
+.advantage-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 7vw;
+    width: 50vw;
+    
+}
+
+.advantage-title {
+    font-weight: 500;
+    font-size: 2.6vw;
+}
+
+.advantage-text {
+    font-size: 1.3vw;
+    color: grey;
+}
+
+.advantage-text a {
+    color: rgb(156, 156, 156);
+    text-decoration-line: underline;
+}
+
+.donate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.6vw;
+}
+
+.donate-title {
+    font-size: 4.6vw;
+    margin-top: 10vw;
+}
+
+.donate-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90vw;
+}
+
+.card {
+    display: flex;
+    border-radius: 2vw;
+    background-color: white;
+    width: 23vw;
+    height: 32vw;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 3.90vw;
+}
+
+.img-content {
+    border-radius: 1.92vw;
+    width: 20.8vw;
+    height: 20.8vw;
+}
+
+.donate-description {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    width: 20vw;
+}
+
+.donate-description button img {
+    width: 5.20vw;
+    height: 5.20vw;
+}
+
+.donate-name {
+    font-weight: 500;
+    font-size: 2.60vw;
+}
+
+.donate-price {
+    font-weight: 500;
+    color: #FF7D00;
+}
+
+footer {
+    margin-top: 3.12vw;
+    padding-top: 2.08vw;
+    background-color: #231507;
+    padding-bottom: 2.08vw;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+    margin-left: 2.5vw;
+}
+
+.footer-rights {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer-payment img {
+    height: 2vw;
+    max-width: none;
+}
+
+.footer-payment {
+    margin-top: 5.20vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 5.20vw;
+    height: 5.20vw;
+}
+
+.footer-copyright {
+    color: rgb(104, 102, 102);
+    font-size: 1vw;
+    margin-top: 2vw;
+}
+
+.footer-info {
+    display: flex;
+    width: 40vw;
+    justify-content: space-around;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    height: 12vw;
+    justify-content: space-between;
+}
+
+.footer-title {
+    color: rgb(85, 84, 84);
+    letter-spacing: 0.5vw;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 8vw;
+    color: rgb(214, 214, 214);
+}
+
+* {
+    scroll-behavior: smooth;
+}
