@@ -22,4 +22,7 @@ from frox_world import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
+    path('donate/', views.donate, name="donate"),
+    path('register/', views.register, name="register"),
+    path('login/', views.login, name="login")
 ]

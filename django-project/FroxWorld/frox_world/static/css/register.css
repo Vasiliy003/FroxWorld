@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
+.main {
+    width: 26vw;
+    height: 27vw;
+}
+
+.input-container {
+    min-height: 50%;
+}

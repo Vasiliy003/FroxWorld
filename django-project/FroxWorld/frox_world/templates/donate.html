@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{ title }} </title>
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title> {{ title }} </title>
 </head>
 <body>
     <header>
@@ -26,15 +26,15 @@
                 <div>Галерея</div>
             </div>
             <div class="header-social">
-                <a target="_blank" href="https://www.youtube.com/@Yarik_Frox"><img src="{% static "img/Youtube.svg" %}" alt=""></a>
-                <a target="_blank" href="https://vk.com/yrfungroup"><img src="{% static "img/VK.svg" %}" alt=""></a>
-                <a target="_blank" href="https://discord.gg/K2RrQwMhZn"><img src="{% static "img/Discord.svg" %}" alt=""></a>
+                <a target="_blank" href="https://www.youtube.com/@Yarik_Frox"><img src="{% static 'img/Youtube.svg' %}" alt=""></a>
+                <a target="_blank" href="https://vk.com/yrfungroup"><img src="{% static 'img/VK.svg' %}" alt=""></a>
+                <a target="_blank" href="https://discord.gg/K2RrQwMhZn"><img src="{% static 'img/Discord.svg' %}" alt=""></a>
             </div>
             <div class="sign-in">
                 <form action="{% url 'login' %}">
                     <button class="sign-in-btn">Войти</button>
                 </form>
-                <div><img src="{% static "img/Profile.svg" %}" alt=""></div>
+                <div><img src="{% static 'img/Profile.svg' %}" alt=""></div>
             </div>
         </section>
     </header>
@@ -43,11 +43,11 @@
         <section class="start-section">
             <div class="description">
                 <div>
-                    <img class="big-logo" src={% static "img/logo.svg" %} alt="">
+                    <img class="big-logo" src="{% static 'img/logo.svg' %}" alt="">
                 </div>
                 <div class="description-text">
-                    <h1>FroxWorld</h1>
-                    <p class="description-text-p">Открой для себя огромные миры, полные веселья и миллионов друзей</p>
+                    <h1>Донаты</h1>
+                    <p class="description-text-p">Магазин привелегий</p>
                 </div>
             </div>
             <div class="play">
@@ -61,44 +61,63 @@
                 </div>
             </div>
         </section>
-        <section class="about">
-            <div>  
-                <img class="about-image" src="{% static 'img/Frox.png' %}" alt="">
+        <section class="donate">
+            <div class="donate-title">
+                Донат привелегии
             </div>
-            <div class="about-info">
-                <div class="about-title">
-                    О сервере
-                </div>
-                <div class="about-line"></div>
-                <div class="about-text">
-                    FroxWorld - Игровой сервер Minecraft. С каждым месяцем мы развиваемся всё больше. На сервере ты сможешь хорошо провести своё время, и остаться довольным игровым процессом! Мы желаем вам хорошо провести время на нашем сервере!
-                </div>
+            <div class="donate-info">
+                {% for privilege in privileges %}
+                    {% if privilege.privilege_type.name == "privilege" %}
+                        <div class="card">
+                            <div><img class="img-content" src="{% static 'img/Donate.png' %}" alt=""></div>
+                            <div class="donate-description">
+                                <div>
+                                    <div class="donate-name">{{ privilege.name }}</div>
+                                    <div class="donate-price">{{ privilege.price }}₽</div>
+                                </div>
+                                <button><img src="{% static 'img/add.png' %}" alt=""></button>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
-        </section>
-        <section  class="advantages">
-            <div class="advantages-title">Почему FroxWorld?</div>
-            <div class="advantages-info">
-                <div class="advantage">
-                    <div class="advantage-icons"><img class="advantage-icon" src="{% static 'img/icon-Discord.png' %}" alt=""></div>
-                    <div class="advantage-info">
-                        <div class="advantage-title">Discord сервер</div>
-                        <div class="advantage-text">На нашем <a target="_blank" href="https://discord.gg/K2RrQwMhZn">Discord</a> сервере вы можете найти, с кем поиграть, с кем поболтать.</div>
-                    </div>
-                </div>
-                <div class="advantage">
-                    <div class="advantage-icons"><img class="advantage-icon" src="{% static 'img/icon-Launcher.png' %}" alt=""></div>
-                    <div class="advantage-info">
-                        <div class="advantage-title">Свой Launcher</div>
-                        <div class="advantage-text">Собственный Launcher, оптимизированный и готовый к тому, чтобы начать ваше приключение</div>
-                    </div>
-                </div>
-                <div class="advantage">
-                    <div class="advantage-icons"><img class="advantage-icon" src="{% static 'img/icon-Shop.png' %}" alt=""></div>
-                    <div class="advantage-info">
-                        <div class="advantage-title">Онлайн магазин</div>
-                        <div class="advantage-text">На сайте вы можете приобрести как донатные привелегии, так и кейсы.</div>
-                    </div>
-                </div>
+            <div class="donate-title">
+                Кейсы
+            </div>
+            <div class="donate-info">
+                {% for privilege in privileges %}
+                    {% if privilege.privilege_type.name == "cases" %}
+                        <div class="card">
+                            <div><img class="img-content" src="{% static 'img/Donate.png' %}" alt=""></div>
+                            <div class="donate-description">
+                                <div>
+                                    <div class="donate-name">{{ privilege.name }}</div>
+                                    <div class="donate-price">{{ privilege.price }}₽</div>
+                                </div>
+                                <button><img src="{% static 'img/add.png' %}" alt=""></button>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="donate-title">
+                Услуги
+            </div>
+            <div class="donate-info">
+                {% for privilege in privileges %}
+                    {% if privilege.privilege_type.name == "services" %}
+                        <div class="card">
+                            <div><img class="img-content" src="{% static 'img/Donate.png' %}" alt=""></div>
+                            <div class="donate-description">
+                                <div>
+                                    <div class="donate-name">{{ privilege.name }}</div>
+                                    <div class="donate-price">{{ privilege.price }}₽</div>
+                                </div>
+                                <button><img src="{% static 'img/add.png' %}" alt=""></button>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </section>
     </main>
@@ -129,7 +148,7 @@
                     <div class="footer-links">
                         <div><a href="{% url 'index' %}">Домой</a></div>
                         <div><a href="{% url 'donate' %}">Донаты</a></div>
-                        <div><a href="Reload.txt" download="">Галерея</a></div>
+                        <div><a href="#">Галерея</a></div>
                     </div>
                 </div>
                 <div class="footer-menu">

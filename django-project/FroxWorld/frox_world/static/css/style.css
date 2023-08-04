@@ -310,7 +310,10 @@ header {
 
 .donate-name {
     font-weight: 500;
-    font-size: 2.60vw;
+    font-size: 1.5vw;
+    max-height: 5vw;
+    max-width: 15vw;
+    line-height: 2vw;
 }
 
 .donate-price {
