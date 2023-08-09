@@ -395,6 +395,12 @@ footer {
     color: rgb(214, 214, 214);
 }
 
+.profile-logo {
+    height: 15.6vw;
+    width: 15.6vw;
+    border-radius: 45vw;
+}
+
 * {
     scroll-behavior: smooth;
 }

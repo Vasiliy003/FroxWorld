@@ -1,33 +1,28 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> {{ title }} </title>
-    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'css/reg-log.css' %}">
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
-</head>
-<body class="body-login">
-    <main>
-        <form action="#" method="POST" class="main">
-            <div class="label">Вход</div>
-            <div class="input-container">
-                <div class="input-wrapper">
-                    <div class="input-logo"><img src="{% static 'img/user-icon.png' %}" alt=""></div>
-                    <input placeholder="Логин/Почта" type="text" name="login/email">
-                </div>
-                <div class="input-wrapper">
-                    <div class="input-logo"><img src="{% static 'img/pass-icon.png' %}" alt=""></div>
-                    <input placeholder="Пароль" type="password" name="password">
-                </div>
+{% block content %}
+<div class="form-wrapper">
+    <form action="#" method="POST" class="main">
+        <div class="label">Вход</div>
+        <div class="input-container">
+            <div class="input-wrapper">
+                <div class="input-logo"><img src="{% static 'img/user-icon.png' %}" alt=""></div>
+                <input placeholder="Логин/Почта" type="text" name="login/email">
             </div>
-            <div>
-                <div><button type="submit" class="btn">Войти</button></div>
-                <div class="log-reg">Впервые у нас? <br> <a href="{% url 'register' %}">Зарегистрируйтесь</a> сейчас</div>
+            <div class="input-wrapper">
+                <div class="input-logo"><img src="{% static 'img/pass-icon.png' %}" alt=""></div>
+                <input placeholder="Пароль" type="password" name="password">
             </div>
-        </form>
-    </main>
-</body>
+        </div>
+        <div>
+            <div><button type="submit" class="btn">Войти</button></div>
+            <div class="log-reg">Впервые у нас? <br> <a href="{% url 'register' %}">Зарегистрируйтесь</a> сейчас</div>
+        </div>
+    </form>
+</div>
+{% endblock content %}
+{% block load_css %}
+<link rel="stylesheet" href="{% static 'css/reg-log.css' %}">
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock load_css %}
+{% block footer %}{% endblock footer %}

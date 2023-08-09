@@ -43,3 +43,25 @@ def login(request):
     }
     
     return render(request, 'login.html', context)
+
+def profile(request):
+    servers = Server.objects.all()
+    profiles = Profile.objects.all()
+
+    context = {
+        "servers": servers,
+        "title" : "Profile",
+        "profiles": profiles,
+
+    }
+
+    return render(request, 'profile.html', context)
+
+def reg_profile(request):
+    
+
+    context = {
+        "title": "Successfully"
+    }
+
+    return render(request, 'reg_profile.html', context)

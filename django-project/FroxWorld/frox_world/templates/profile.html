@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="background-figure"></div>
+<section class="start-section">
+    <div class="description">
+        <div>
+            <img class="profile-logo" src={% static "img/logo.svg" %} alt="">
+        </div>
+        <div class="description-text">
+            <h1>Имя</h1>
+            <p class="description-text-p">Почта</p>
+        </div>
+    </div>
+    <div class="play">
+        <div>
+            <button class="play-btn"><p>Играть</p><img src="{% static 'img/arrow.png' %}" alt=""></button>
+        </div>
+        <div>
+            {% for server in servers %}
+            <div class="play-version"><img src="{% if server.is_online %}{% static 'img/online-icon.png' %}{% else %}{% static 'img/offline-icon.png' %}{% endif %}"><p>{{ server.name }} {{ server.online }}/{{ server.max_online }} </p></div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,45 +1,7 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> {{ title }} </title>
-    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <header>
-        <section class="header-section">
-            <div class="header-logo">
-                <div>
-                    <img src="{% static 'img/logo.svg' %}" alt="">
-                </div>
-                <div>
-                    <span class="logo-text">FroxWorld</span>
-                </div>
-            </div>
-            <div class="header-navigation">
-                <a href="{% url 'index' %}"><div>О сервере</div></a>
-                <a href="{% url 'donate' %}"><div>Донаты</div></a>
-                <div>Галерея</div>
-            </div>
-            <div class="header-social">
-                <a target="_blank" href="https://www.youtube.com/@Yarik_Frox"><img src="{% static 'img/Youtube.svg' %}" alt=""></a>
-                <a target="_blank" href="https://vk.com/yrfungroup"><img src="{% static 'img/VK.svg' %}" alt=""></a>
-                <a target="_blank" href="https://discord.gg/K2RrQwMhZn"><img src="{% static 'img/Discord.svg' %}" alt=""></a>
-            </div>
-            <div class="sign-in">
-                <form action="{% url 'login' %}">
-                    <button class="sign-in-btn">Войти</button>
-                </form>
-                <div><img src="{% static 'img/Profile.svg' %}" alt=""></div>
-            </div>
-        </section>
-    </header>
-    <main>
-        <div class="background-figure"></div>
+{% block content %}
+<div class="background-figure"></div>
         <section class="start-section">
             <div class="description">
                 <div>
@@ -120,47 +82,4 @@
                 {% endfor %}
             </div>
         </section>
-    </main>
-    <footer>
-        <section class="footer-section">
-            <div class="footer-rights">
-                <div class="footer-logo">
-                    <div>
-                        <img src="{% static 'img/logo.svg' %}" alt="">
-                    </div>
-                    <div>
-                        <span class="logo-text">FroxWorld</span>
-                    </div>
-                </div>
-                <div class="footer-copyright">
-                    Copyright © 2023 FROX WORLD. All rights reserved.
-                </div>
-                <div class="footer-payment">
-                    <div><img src="{% static 'img/MIR.svg' %}" alt=""></div>
-                    <div><img src="{% static 'img/Visa.svg' %}" alt=""></div>
-                    <div><img src="{% static 'img/Mastercard.png' %}" alt=""></div>
-                    <div><img src="{% static 'img/Qiwi.png' %}" alt=""></div>
-                </div>
-            </div>
-            <div class="footer-info">
-                <div class="footer-menu">
-                    <div class="footer-title">MENU</div>
-                    <div class="footer-links">
-                        <div><a href="{% url 'index' %}">Домой</a></div>
-                        <div><a href="{% url 'donate' %}">Донаты</a></div>
-                        <div><a href="#">Галерея</a></div>
-                    </div>
-                </div>
-                <div class="footer-menu">
-                    <div class="footer-title">SOCIAL</div>
-                    <div class="footer-links">
-                        <div><a target="_blank" href="https://discord.gg/K2RrQwMhZn">Discord</a></div>
-                        <div><a target="_blank" href="https://www.youtube.com/@Yarik_Frox">Youtube</a></div>
-                        <div><a target="_blank" href="https://vk.com/yrfungroup">ВКонтакте</a></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </footer>
-</body>
-</html>
+{% endblock content %}
