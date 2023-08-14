@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 from .models import *
 # Create your views here.
@@ -44,11 +45,14 @@ def login(request):
     
     return render(request, 'login.html', context)
 
+@login_required(login_url="login")
 def profile(request):
+    profile_data = Profile.objects.get(user=request.user)
     servers = Server.objects.all()
     profiles = Profile.objects.all()
 
     context = {
+        "profile": profile_data,
         "servers": servers,
         "title" : "Profile",
         "profiles": profiles,
@@ -65,3 +69,12 @@ def reg_profile(request):
     }
 
     return render(request, 'reg_profile.html', context)
+
+def logout(request):
+
+
+    context = {
+        "title": "Successfully"
+    }
+
+    return render(request, 'logged_out.html', context)

@@ -15,7 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.contrib.auth import views as auth_views
 
 from frox_world import views
 
@@ -25,6 +26,8 @@ urlpatterns = [
     path('donate/', views.donate, name="donate"),
     path('register/', views.register, name="register"),
     path('login/', views.login, name="login"),
-    path('profile/', views.profile, name="profile"),
-    path('reg_profile', views.reg_profile, name="reg_profile")
+    path('accounts/profile/', views.profile, name="profile"),
+    path('reg_profile', views.reg_profile, name="reg_profile"),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/logout/', auth_views.LogoutView.as_view(template_name='registration/logged_out.html'), name="logout")
 ]

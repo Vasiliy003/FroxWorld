@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="form-wrapper">
+    <form action="{% url 'login' %}" method="POST" class="main">
+        {% csrf_token %}
+        <div class="label">Вход</div>
+        <div class="input-container">
+            <div class="input-wrapper">
+                <div class="input-logo"><img src="{% static 'img/user-icon.png' %}" alt=""></div>
+                <input placeholder="Логин/Почта" type="text" name="username">
+            </div>
+            <div class="input-wrapper">
+                <div class="input-logo"><img src="{% static 'img/pass-icon.png' %}" alt=""></div>
+                <input placeholder="Пароль" type="password" name="password">
+            </div>
+        </div>
+        <div>
+            <div><button type="submit" class="btn">Войти</button></div>
+            <div class="log-reg">Впервые у нас? <br> <a href="{% url 'register' %}">Зарегистрируйтесь</a> сейчас</div>
+        </div>
+    </form>
+</div>
+{% endblock content %}
+{% block load_css %}
+<link rel="stylesheet" href="{% static 'css/reg-log.css' %}">
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock load_css %}
+{% block footer %}{% endblock footer %}

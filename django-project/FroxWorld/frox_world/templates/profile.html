@@ -8,8 +8,8 @@
             <img class="profile-logo" src={% static "img/logo.svg" %} alt="">
         </div>
         <div class="description-text">
-            <h1>Имя</h1>
-            <p class="description-text-p">Почта</p>
+            <h1>{{profile.user.username}}</h1>
+            <p class="description-text-p">{{profile.user.email}}</p>
         </div>
     </div>
     <div class="play">
