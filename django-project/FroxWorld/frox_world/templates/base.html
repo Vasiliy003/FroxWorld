@@ -37,7 +37,14 @@
                     <button class="sign-in-btn">Войти</button>
                 </form>
                 {% endif %}
-                {% if user.is_authenticated %}<a href="{% url 'profile' %}"><img src="{% static "img/Profile.svg" %}" alt=""></a>{% else %}
+                {% if user.is_authenticated %}
+                <a href="{% url 'profile' %}"><img src="{% static "img/Profile.svg" %}" alt=""></a>
+                <div class="profile-menu">
+                    <div class="profile-btn"><a href="{% url 'profile' %}">Профиль</a></div>
+                    <div class="change-pass-btn"><a href="{% url 'password_reset' %}">Сменить пароль</a></div>
+                    <div class="profile-exit-btn"><a href="{% url 'logout' %}">Выйти</a></div>
+                </div>
+                {% else %}
                 <div><img src="{% static "img/Profile.svg" %}" alt=""></div>
                 {% endif %}
             </div>

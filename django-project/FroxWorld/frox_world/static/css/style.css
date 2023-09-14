@@ -52,6 +52,7 @@ header {
 }
 
 .sign-in {
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
@@ -399,8 +400,88 @@ footer {
     height: 15.6vw;
     width: 15.6vw;
     border-radius: 45vw;
+    margin-bottom: 1vw;
+    min-width: 15.6vw;
 }
 
 * {
     scroll-behavior: smooth;
+}
+
+.profile-section {
+    display: flex;
+    height: 50vw;
+    margin-top: 13vw;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.skin {
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skin img {
+    width: 30vw;
+}
+
+.skin-form {
+    margin-top: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skin-form button {
+    border-radius: 5.20vw;
+    background-color: #fd922e;
+    height: 4vw;
+    width: 15vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2vw;
+}
+
+.skin-form button img {
+    width: 3vw;
+    height: 3vw;
+    color: white;
+}
+
+.input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+
+.input__file-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff9939;
+    margin-bottom: 1vw;
+    border: 0.1vw solid #FF7D00;
+    border-radius: 0.4vw;
+    height: 2.8vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.profile-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 4vw;
+    left: -1vw;
+    background-color: rgb(59, 59, 59);
+    padding-right: 1vw;
+    padding-left: 1vw;
+    height: 12vw;
+    border-radius: 2vw 0vw 2vw 2vw;
+    color: rgb(206, 206, 206);
 }

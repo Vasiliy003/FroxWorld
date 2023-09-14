@@ -27,11 +27,14 @@ class Purchase(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-    image = models.ImageField(blank=True)
-    skin = models.ImageField(blank=True)
+    image = models.ImageField(blank=True, upload_to='images/')
+    skin = models.ImageField(blank=True, upload_to='skins/')
 
     def __str__(self):
-        return self.user.username
+        if self.user:
+            return self.user.username
+        else:
+            return "User-error"
     
 
 # class User(models.Model):

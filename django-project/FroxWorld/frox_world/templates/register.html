@@ -2,30 +2,59 @@
 {% load static %}
 {% block content %}
 <div class="form-wrapper">
-    <form action="#" method="POST" class="main">
+    <form action="#" method="POST" class="main">{% csrf_token %}
         <div class="label">Регистрация</div>
         <div class="input-container">
             <div class="input-wrapper">
                 <div class="input-logo"><img src="{% static 'img/user-icon.png' %}" alt=""></div>
-                <input placeholder="Логин" type="text" name="login">
+                <input placeholder="Логин" type="text" name="username" maxlength="150" autofocus required id="id_username">
             </div>
             <div class="input-wrapper">
                 <div class="input-logo"><img src="{% static 'img/email-icon.png' %}" alt=""></div>
-                <input placeholder="E-mail" type="email" name="email">
+                <input placeholder="E-mail" type="email" name="email" maxlength="254" id="id_email">
             </div>
             <div class="input-wrapper">
                 <div class="input-logo"><img src="{% static 'img/pass-icon.png' %}" alt=""></div>
-                <input placeholder="Пароль" type="password" name="password">
+                <input placeholder="Пароль" type="password" name="password1" autocomplete="new-password" required id="id_password1">
             </div>
             <div class="input-wrapper">
                 <div class="input-logo"><img src="{% static 'img/pass-icon.png' %}" alt=""></div>
-                <input placeholder="Повторите пароль" type="password" name="repassword">
+                <input placeholder="Повторите пароль" type="password" name="password2" autocomplete="new-password" required id="id_password2">
             </div>
         </div>
         <div>
             <div><button type="submit" class="btn">Зарегистрироваться</button></div>
             <div class="log-reg">Уже есть аккаунт? <a href="{% url 'login' %}">Войти</a> сейчас</div>
         </div>
+        <div>
+            {% for field in form %}
+            <p>
+                {% if field.errors %}
+                <ul class="errorlist">
+                    {% for error in field.errors %}
+                    <p class="error">{{ error }}</p>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </p>
+            {% endfor %}
+        </div>
+        {% comment %} {% for field in form %}
+            <p>
+                {% if field.errors %}
+                <ul class="errorlist">
+                    {% for error in field.errors %}
+                    <p>{{ error }}</p>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {{ field.label_tag }} {{ field }}
+            </p>
+        {% endfor %}
+        <div>
+            <div><button type="submit" class="btn">Зарегистрироваться</button></div>
+            <div class="log-reg">Уже есть аккаунт? <a href="{% url 'login' %}">Войти</a> сейчас</div>
+        </div> {% endcomment %}
     </form>
 </div>
 {% endblock content %}

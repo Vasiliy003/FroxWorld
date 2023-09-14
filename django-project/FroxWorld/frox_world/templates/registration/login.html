@@ -19,6 +19,13 @@
             <div><button type="submit" class="btn">Войти</button></div>
             <div class="log-reg">Впервые у нас? <br> <a href="{% url 'register' %}">Зарегистрируйтесь</a> сейчас</div>
         </div>
+        <div>
+            {% if field.errors %}
+                {% for error in field.errors %}
+                    <li><a href="#id_{{ field.name }}" class="error">{{ error|escape }}</a></li>
+                {% endfor %}
+            {% endif %}
+        </div>
     </form>
 </div>
 {% endblock content %}

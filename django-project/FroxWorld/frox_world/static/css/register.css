@@ -2,9 +2,20 @@
 
 .main {
     width: 26vw;
-    height: 27vw;
+    min-height: 27vw;
 }
 
 .input-container {
     min-height: 50%;
+}
+
+.input-wrapper {
+    margin-bottom: 0.5vw;
+}
+
+.error {
+    color: rgb(131, 131, 131);
+    line-height: 2vw;
+    margin-top: 0.5vw;
+    font-size: 1.25vw;
 }
