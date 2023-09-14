@@ -472,6 +472,7 @@ footer {
 
 .profile-menu {
     position: absolute;
+    transform-origin: top right;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -481,7 +482,16 @@ footer {
     background-color: rgb(59, 59, 59);
     padding-right: 1vw;
     padding-left: 1vw;
-    height: 12vw;
+    height: 0vw;
+    overflow: hidden;
     border-radius: 2vw 0vw 2vw 2vw;
     color: rgb(206, 206, 206);
+    transition-duration: 0.3s;
+    transform: scale(0, 1);
+}
+
+.profile-menu-show {
+    height: 12vw;
+    transition-duration: 0.3s;
+    transform: scale(1, 1);
 }

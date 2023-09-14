@@ -38,7 +38,7 @@
                 </form>
                 {% endif %}
                 {% if user.is_authenticated %}
-                <a href="{% url 'profile' %}"><img src="{% static "img/Profile.svg" %}" alt=""></a>
+                <img src="{% static "img/Profile.svg" %}" id="profile-btn">
                 <div class="profile-menu">
                     <div class="profile-btn"><a href="{% url 'profile' %}">Профиль</a></div>
                     <div class="change-pass-btn"><a href="{% url 'password_reset' %}">Сменить пароль</a></div>
@@ -98,5 +98,8 @@
         </section>
     </footer>
     {% endblock footer %}
+
+    <script src="{% static 'js/base.js' %}"></script>
+    {% block load_js %}{% endblock load_js %}
 </body>
 </html>
