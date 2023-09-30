@@ -82,4 +82,32 @@
                 {% endfor %}
             </div>
         </section>
+        <section class="purchase">
+            <div class="donate-cart">
+                <img src="{% static "img/shopping-bag.png" %}" alt="">
+                <div class="shopping-count">4</div>
+            </div>
+            <div class="cart-list">
+                <div class="purchase-section">
+                    <div class="purchase-info">Название привилегии <p>10.092р.</p></div>
+                    <button class="purchase-del-btn"><img src="{% static 'img/icon-delete.svg' %}" alt=""></button>
+                </div>
+                <div class="purchase-section">
+                    <div class="purchase-info">Название привилегии <p>10.092р.</p></div>
+                    <button class="purchase-del-btn"><img src="{% static 'img/icon-delete.svg' %}" alt=""></button>
+                </div>
+                <div class="purchase-section">
+                    <div class="purchase-info">Название привилегии <p>10.092р.</p></div>
+                    <button class="purchase-del-btn"><img src="{% static 'img/icon-delete.svg' %}" alt=""></button>
+                </div>                
+                <div class="purchase-section">
+                    <div class="purchase-info">Название привилегии <p>10.092р.</p></div>
+                    <button class="purchase-del-btn"><img src="{% static 'img/icon-delete.svg' %}" alt=""></button>
+                </div>
+            </div>
+        </section>
 {% endblock content %}
+
+{% block load_js %}
+<script src="{% static 'js/donate.js' %}"></script>
+{% endblock load_js %}

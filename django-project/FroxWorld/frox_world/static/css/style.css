@@ -51,6 +51,11 @@ header {
     font-size: 1.5vw;
 }
 
+.navigation-target {
+    text-decoration: underline;
+    color: #eb5757;
+}
+
 .sign-in {
     position: relative;
     display: flex;
@@ -494,4 +499,90 @@ footer {
     height: 12vw;
     transition-duration: 0.3s;
     transform: scale(1, 1);
+}
+
+.donate-cart {
+    position: fixed;
+    right: 0vw;
+    bottom: 0vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF7D00;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 6vw;
+    margin: 1vw;
+}
+
+.donate-cart img {
+    width: 5vw;
+}
+
+.shopping-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0vw;
+    bottom: 0vw;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    background-color: rgb(214, 0, 0);
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 5vw;
+    font-size: 1.75vw;
+}
+
+.cart-list {
+    transform-origin: top right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: fixed;
+    right: 1vw;
+    bottom: 9vw;
+    background-color: rgb(59, 59, 59);
+    width: 0vw;
+    height: 0vw;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    overflow: hidden;
+    transition-duration: 0.3s;
+}
+
+.purchase-section {
+    margin-bottom: 1vw;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 2.5vw;
+}
+
+.cart-list-show {
+    width: 35vw;
+    height: auto;
+    transition-duration: 0.3s;
+}
+
+.purchase-info {
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.purchase-info p {
+    color:#cccccc;
+    font-weight: 500;
+    margin-left: 1vw;
+}
+
+.purchase-del-btn {
+    background-color: #ff9939;
+    border-radius: 1vw;
+    margin-top: 0.5vw;
+    height: 2.5svw;
+    width: 2.5vw;
 }
