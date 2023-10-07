@@ -22,9 +22,18 @@
                 </div>
             </div>
             <div class="header-navigation">
-                <a href="{% url 'index' %}"><div id="header-navigation-btn">О сервере</div></a>
-                <a href="{% url 'donate' %}"><div id="header-navigation-btn">Донаты</div></a>
-                <div id="header-navigation-btn">Галерея</div>
+                <div class="header-navigation-btn">
+                    <a href="{% url 'index' %}">О сервере</a>
+                    <div class="underline"></div>
+                </div>
+                <div class="header-navigation-btn">
+                    <a href="{% url 'donate' %}">Донаты</a>
+                    <div class="underline"></div>
+                </div>
+                <div class="header-navigation-btn">
+                    <a href="#">Галерея</a>
+                    <div class="underline"></div>
+                </div>
             </div>
             <div class="header-social">
                 <a target="_blank" href="https://www.youtube.com/@Yarik_Frox"><img src="{% static "img/Youtube.svg" %}" alt=""></a>
@@ -49,6 +58,7 @@
                 {% endif %}
             </div>
         </section>
+
     </header>
     <main>
         {% block content %}

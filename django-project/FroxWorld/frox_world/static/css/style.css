@@ -49,11 +49,26 @@ header {
     justify-content: space-between;
     width: 28.6vw;
     font-size: 1.5vw;
+    line-height: 2.5vw;
+}
+
+.underline{
+    width: 100%;
+    height: 0.2vw;
+    transform: scale(0, 1);
+    transform-origin: center;
+    background-color: white;
+    transition-duration: 0.3s;
+}
+
+.header-navigation-btn:hover .underline {
+    transform: scale(1, 1);
+    transition-duration: 0.3s;
 }
 
 .navigation-target {
     text-decoration: underline;
-    color: #eb5757;
+    color: #fd922e;
 }
 
 .sign-in {
@@ -509,14 +524,14 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #FF7D00;
-    width: 7vw;
-    height: 7vw;
+    width: 6vw;
+    height: 6vw;
     border-radius: 6vw;
     margin: 1vw;
 }
 
 .donate-cart img {
-    width: 5vw;
+    width: 4.5vw;
 }
 
 .shopping-count {
@@ -529,10 +544,10 @@ footer {
     margin-right: 1vw;
     margin-bottom: 1vw;
     background-color: rgb(214, 0, 0);
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 2vw;
+    height: 2vw;
     border-radius: 5vw;
-    font-size: 1.75vw;
+    font-size: 1.5vw;
 }
 
 .cart-list {
@@ -585,4 +600,92 @@ footer {
     margin-top: 0.5vw;
     height: 2.5svw;
     width: 2.5vw;
+}
+
+.basket-background {
+    width: 99vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.basket-wrapper {
+    width: 50vw;
+    height: 35vw;
+    border-radius: 45px;
+    background-color: white;
+    color: #0D0D0D;
+    padding: 1.5vw;
+}
+
+.basket-donate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(196, 196, 196);
+    border-radius: 45px;
+    padding: 1vw;
+    margin-bottom: 1vw;
+}
+
+.basket-donate-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.basket-donate-img img {
+    height: 6.5vw;
+    border-radius: 2vw;
+}
+
+.basket-donate-info {
+    padding-left: 1vw;
+    font-size: 1.75vw;
+    line-height: 3vw;
+    color: #333333;
+}
+
+.basket-donate-info-price {
+    font-weight: 500;
+}
+
+.basket-donate-del-btn img {
+    width: 4vw;
+}
+
+.basket-exit {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+}
+
+.basket-purchase-btn {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 39.5vw;
+    left: 42.5vw;
+    z-index: 1;
+    background-color: #ffffff;
+    border-radius: 45px;
+    color: #0D0D0D;
+    font-weight: 500;
+    font-size: 1.8vw;
+    width: 15vw;
+    transition-duration: 0.3s;
+}
+
+.basket-purchase-btn:hover {
+    background-color: rgb(196, 196, 196);
+    font-size: 2vw;
+    top: 39.4vw;
+    transition-duration: 0.3s;
 }
