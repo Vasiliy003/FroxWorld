@@ -30,14 +30,14 @@
             <div class="donate-info">
                 {% for privilege in privileges %}
                     {% if privilege.privilege_type.name == "privilege" %}
-                        <div class="card">
+                        <div class="card" privilegeId = {{ privilege.pk }}>
                             <div><img class="img-content" src="{% static 'img/Donate.png' %}" alt=""></div>
                             <div class="donate-description">
                                 <div>
                                     <div class="donate-name">{{ privilege.name }}</div>
                                     <div class="donate-price">{{ privilege.price }}₽</div>
                                 </div>
-                                <button><img src="{% static 'img/add.png' %}" alt=""></button>
+                                <button class="add-basket-btn"><img src="{% static 'img/add.png' %}" alt=""></button>
                             </div>
                         </div>
                     {% endif %}
@@ -49,14 +49,14 @@
             <div class="donate-info">
                 {% for privilege in privileges %}
                     {% if privilege.privilege_type.name == "cases" %}
-                        <div class="card">
+                        <div class="card" privilegeId = {{ privilege.pk }}>
                             <div><img class="img-content" src="{% static 'img/Donate.png' %}" alt=""></div>
                             <div class="donate-description">
                                 <div>
                                     <div class="donate-name">{{ privilege.name }}</div>
                                     <div class="donate-price">{{ privilege.price }}₽</div>
                                 </div>
-                                <button><img src="{% static 'img/add.png' %}" alt=""></button>
+                                <button class="add-basket-btn"><img src="{% static 'img/add.png' %}" alt=""></button>
                             </div>
                         </div>
                     {% endif %}
@@ -68,14 +68,14 @@
             <div class="donate-info">
                 {% for privilege in privileges %}
                     {% if privilege.privilege_type.name == "services" %}
-                        <div class="card">
+                        <div class="card" privilegeId = {{ privilege.pk }}>
                             <div><img class="img-content" src="{% if privilege.image %}{{privilege.image.url}}{% else %}{% static 'img/Donate.png' %}{% endif %}" alt=""></div>
                             <div class="donate-description">
                                 <div>
                                     <div class="donate-name">{{ privilege.name }}</div>
                                     <div class="donate-price">{{ privilege.price }}₽</div>
                                 </div>
-                                <button><img src="{% static 'img/add.png' %}" alt=""></button>
+                                <button class="add-basket-btn"><img src="{% static 'img/add.png' %}" alt=""></button>
                             </div>
                         </div>
                     {% endif %}
@@ -85,7 +85,7 @@
         <section class="purchase">
             <div class="donate-cart">
                 <img src="{% static "img/shopping-bag.png" %}" alt="">
-                <div class="shopping-count">4</div>
+                <div class="shopping-count">0</div>
             </div>
             <div class="cart-list">
                 <div class="purchase-section">
